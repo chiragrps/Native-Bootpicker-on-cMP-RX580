@@ -11,7 +11,7 @@ https://forums.macrumors.com/threads/gpu-compatibility-list-for-cmp.2174600/
     "https://www.youtube.com/watch?v=o3mFlSQ1jJ8"
 
 
-3.  **Process the flash the AMD GPU vBIOS**
+3.  **Process of flashing AMD GPU vBIOS**
     
     -   with reference to AMP GPU vBIOS flash (https://www.youtube.com/watch?v=eBuc_Nk05K8)
     -   there are many more reference videos to flash the AMD GPU vBIOS, simple and straightforward.
