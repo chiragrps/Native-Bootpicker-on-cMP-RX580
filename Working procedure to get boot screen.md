@@ -1,20 +1,21 @@
 ### Step to enable the boot screen on PC GPUs on cMP 
 
-1. **Check the Detailed GPU List from this list**
+1. **Check the GPU compatibility from this list**
 https://forums.macrumors.com/threads/gpu-compatibility-list-for-cmp.2174600/
 
 2. **Enable GOP**
 
    -    Refer detailed instruction "https://forums.macrumors.com/threads/enablegop-pre-opencore-gop-support-for-efi-era-imacs-and-mac-pros.2378942/post-32137842" 
 
-    -   Refer this video, it should be self explanatory. I can not explain better than this. 
+    -   Refer this video to get GOP enable in firmware, it should be self explanatory. I can not explain better than this. 
     "https://www.youtube.com/watch?v=o3mFlSQ1jJ8"
 
 
-3.  **Process the flash the AMD GMP vBIOS**
+3.  **Process the flash the AMD GPU vBIOS**
     
-    -   with reference to
-    AMP GPU vBIOS flash (https://www.youtube.com/watch?v=eBuc_Nk05K8)
+    -   with reference to AMP GPU vBIOS flash (https://www.youtube.com/watch?v=eBuc_Nk05K8)
+    -   there are many more reference videos to flash the AMD GPU vBIOS, simple and straightforward.
+      
 
     3.1 **Installed windows 10 on cMP**
 
@@ -22,7 +23,7 @@ https://forums.macrumors.com/threads/gpu-compatibility-list-for-cmp.2174600/
     -   removed all the hard drives except the one where windows was intended to be installed.
     -   simple but lenghty next-next wizard to install windows on one terabyte hard disk.(tempororily, not a windows fan as of now)
 
-    3.2 **Check if the RX580 working on Windows**
+    3.2 **Checked if the RX580 working on Windows**
 
         -   plugged to Windows and connected both of the GPUs (ATI Apple Built-in with DVI to HDMI connected) and RX580 with HDMI and DP also.
         -   windows came up with only from ATI Apple Built-in card nothing from old purchase RX580 which was working fine on MACOS as metal card
@@ -34,12 +35,13 @@ https://forums.macrumors.com/threads/gpu-compatibility-list-for-cmp.2174600/
 
     -   Installed "Techpowerup GPU Z" tool (https://www.techpowerup.com/download/techpowerup-gpu-z/)
     -   It was easy and could save the current BIOS of both of the cards installed on MACPRO 5,1 (cMP) using this tool. There is scroll down button to select the current GPU config in the tool itself.
-    -   could see there is some memory shown as "Zero" which created doubt in my mind that this card must have been used for some other purposes and some vBIOS has been installed into it. And we must restore the original vBIOS of this card.
+    -   could see there memory was shown as "Zero" which created doubt in my mind that this card must have been used for some other purposes since this was bought as a second hand GPU. And we must restore the original vBIOS of this card.
     -   also from the "Techpowerup GPU Z" tool we could see the Graphics BIOS Version which is like "015.050.002.001.000000"
 
     3.4 **Finding currect and updated vBIOS for RX580**
+    
     -   Again Techpowerup helped to find the correct vBIOS for my card i.e. MSI RX 580 ARMOR OC 8 GB "https://www.techpowerup.com/gpu-specs/msi-rx-580-armor-oc-8-gb.b4430", go to https://www.techpowerup.com/vgabios/ and filter it to your Card Version. I did for this card as "https://www.techpowerup.com/vgabios/?architecture=AMD&manufacturer=MSI&model=RX+580&version=&interface=&memType=&memSize=8192&since="
-        -   it listed as 10 vBIOS versions, I downloaded and tried all but you must choose the latest and the greatest, for me it was "https://www.techpowerup.com/vgabios/191946/MSI.RX580.8192.170314.rom", this is the new vBIOS we are going to install in our RX580.
+        -   it listed 10 vBIOS versions, I downloaded and tried all but you must choose the latest and the greatest, for me it was "https://www.techpowerup.com/vgabios/191946/MSI.RX580.8192.170314.rom", this was the latest one vBIOS, I installed in RX580.
 
     3.5 **Downloading and running the "AMDVBFlash / ATI ATIFlash" tool**
 
